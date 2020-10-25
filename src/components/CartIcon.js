@@ -6,7 +6,7 @@ class CartIcon extends Component {
     render(){
   
         return (
-            <img src={cartIcon} alt="Ir a Inicio" />
+            <img src={cartIcon} alt="Carrito" />
         );
     }
 }
