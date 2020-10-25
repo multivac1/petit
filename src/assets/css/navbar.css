@@ -10,6 +10,7 @@
     bottom: 0;
     position: absolute;
     background-color: #EFF1FA;
+    box-shadow:  0px -3px 20px #D8DAE5;
 }
 
 .navbar__list {
