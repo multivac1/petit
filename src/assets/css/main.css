@@ -1,0 +1,20 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+
+:root {
+
+	/* Colors: */
+    --bg-color: #EFF1FA;
+    --icons-color-active: #2D6469;
+	--text-color-light: #828EB4;
+	--text-color-dark: #353E5A;
+
+}
+
