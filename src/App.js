@@ -5,15 +5,19 @@ import './assets/css/navbar.css';
 import './assets/css/home.css';
 /* Components */
 import Home from './components/Home';
-
+import NavBar from './components/NavBar';
 
 
 function App() {
   return (
-
-      <Home greeting="Impresiones 3D
+  <Fragment>
+    
+    <NavBar />      
+    
+    <Home greeting="Impresiones 3D
       Grabado láser" />
-      
+    
+    </Fragment>
   );
 }
 
