@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+/* Styles */
 import './assets/css/main.css';
 import './assets/css/navbar.css';
-import NavBar from './components/NavBar';
+import './assets/css/home.css';
+/* Components */
+import Home from './components/Home';
+
+
 
 function App() {
   return (
-    <NavBar />
+
+      <Home greeting="Impresiones 3D
+      Grabado láser" />
+      
   );
 }
 
