@@ -1,33 +1,32 @@
-import React, { Component } from 'react';
+import React from 'react';
 import homeIcon from '../assets/images/home_icon.svg';
 import categoryIcon from '../assets/images/category_icon.svg';
 import CartIcon from './CartIcon';
 
-class NavBar extends Component {
+const NavBar = () => {
     
-    render () {
-        return (
-            <nav className="navbar">
-                <ul className="navbar__list">
-                    <li className="navbar__links">
-                        <a href="#">
-                            <img src={homeIcon} alt="Inicio" />
-                        </a>
-                    </li>
-                    <li className="navbar__links">
-                        <a href="#">
-                            <img src={categoryIcon} alt="Categorias" />
-                        </a>
-                    </li>
-                    <li className="navbar__links">
-                        <a href="#">
-                            <CartIcon />
-                        </a>
-                    </li>   
-                </ul>
-            </nav>
-        );
-    }
+    return (
+        <nav className="navbar">
+            <ul className="navbar__list">
+                <li className="navbar__links">
+                    <a href="#">
+                        <img src={homeIcon} alt="Inicio" />
+                    </a>
+                </li>
+                <li className="navbar__links">
+                    <a href="#">
+                        <img src={categoryIcon} alt="Categorias" />
+                    </a>
+                </li>
+                <li className="navbar__links">
+                    <a href="#">
+                        <CartIcon />
+                    </a>
+                </li>   
+            </ul>
+        </nav>
+    );
+    
 }
 
 export default NavBar;

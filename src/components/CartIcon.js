@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import cartIcon from '../assets/images/cart_icon.svg';
 
-class CartIcon extends Component {
+const CartIcon = () => {
+ 
+    return (
+        <img src={cartIcon} alt="Carrito" />
+    );
 
-    render(){
-  
-        return (
-            <img src={cartIcon} alt="Carrito" />
-        );
-    }
 }
 
 export default CartIcon;

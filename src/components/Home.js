@@ -1,19 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-class Home extends Component {
+const Home = (props) => {
 
-    render() {
-
-        return(
-            <div className="home__container">
-                <h1 className="home__greeting ml-5">
-                  {this.props.greeting}
-                </h1>
-                
-            </div>
-        );
-    }
+    return(
+        <div className="home__container">
+            <h1 className="home__greeting ml-5">
+                {props.greeting}
+            </h1>            
+        </div>
+    );
 
 }
 
