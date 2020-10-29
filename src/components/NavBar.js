@@ -8,17 +8,17 @@ const NavBar = () => {
     return (
         <nav className="navbar">
             <ul className="navbar__list">
-                <li className="navbar__links">
+                <li className="navbar__links roundBtn">
                     <a href="#">
                         <img src={homeIcon} alt="Inicio" />
                     </a>
                 </li>
-                <li className="navbar__links">
+                <li className="navbar__links roundBtn">
                     <a href="#">
                         <img src={categoryIcon} alt="Categorias" />
                     </a>
                 </li>
-                <li className="navbar__links">
+                <li className="navbar__links roundBtn">
                     <a href="#">
                         <CartIcon />
                     </a>

@@ -23,17 +23,5 @@
     list-style: none;
 }
 
-.navbar__links {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--bg-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    box-shadow:  7px 7px 11px #D8DAE5, 
-                -7px -7px 11px #fff;
-}
 
 

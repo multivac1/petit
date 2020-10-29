@@ -3,9 +3,11 @@ import React, { Fragment } from 'react';
 import './assets/css/main.css';
 import './assets/css/navbar.css';
 import './assets/css/home.css';
+import './assets/css/buttons.css';
 /* Components */
 import Home from './components/Home';
 import NavBar from './components/NavBar';
+import ItemCount from './components/ItemCount';
 
 
 function App() {
@@ -14,8 +16,12 @@ function App() {
     
     <NavBar />      
     
-    <Home greeting="Impresiones 3D
-      Grabado láser" />
+    <Home 
+
+      greeting="Impresiones 3D
+      Grabado láser" 
+      
+    />
     
     </Fragment>
   );
