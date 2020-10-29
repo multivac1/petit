@@ -5,5 +5,5 @@
 }
 
 .home__greeting {
-    font-family: 'Abril Fatface', cursive;
+    font-family: var(--abril-font);
 }

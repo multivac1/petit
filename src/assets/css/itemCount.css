@@ -1,0 +1,35 @@
+.itemCount__container {
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemCount__list {
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.itemCount__rest, .itemCount__add {
+    cursor: pointer;
+}
+
+.itemCount__quantity {
+    height: 50px;
+    width: 50px;
+    font-family: var(--lato-font);
+    font-weight: 700;
+    color: var(--text-color-dark);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: inset 4px 4px 4px #D8DAE5,
+                inset -4px -4px 4px #fff;
+}

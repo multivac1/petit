@@ -16,5 +16,8 @@
 	--text-color-light: #828EB4;
 	--text-color-dark: #353E5A;
 
+	/* Font */
+	--abril-font: 'Abril Fatface', cursive;
+	--lato-font: 'Lato', sans-serif;
 }
 
