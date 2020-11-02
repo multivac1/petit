@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "img": "pulsera.png",
+        "alt": "Pulsera de madera",
+        "name": "Pulsera",
+        "price": 120
+    },
+    {
+        "id": 1,
+        "img": "pulsera.png",
+        "alt": "Pulsera de madera",
+        "name": "Pulsera",
+        "price": 120
+    },
+    {
+        "id": 1,
+        "img": "pulsera.png",
+        "alt": "Pulsera de madera",
+        "name": "Pulsera",
+        "price": 120
+    },
+    {
+        "id": 1,
+        "img": "pulsera.png",
+        "alt": "Pulsera de madera",
+        "name": "Pulsera",
+        "price": 120
+    }
+]

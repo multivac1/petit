@@ -1,31 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Item = () => {
+const getPromise = (data) => {
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            return res(data)
+        }, 2000)
+    })
+}
 
-    const products = [
-        {
-        id: 1,
-        title: "Titulo prod 1",
-        price: 240
-        },
-        {
-        id: 2,
-        title: "Titulo prod 2",
-        price: 300
-        },
-         {
-        id: 3,
-        title: "Titulo prod 3",
-        price: 450
-        }
-    }];
+const Item = ({dataJson}) => {
+
+    const [sourceData, SetSourceData] = useState([]);
+
+    useEffect(() => {
+        const info = getPromise(dataJson);
+        info.then(result => SetSourceData(result));
+    }, [dataJson])
 
     return (
+        sourceData.map((prod, i) => {
+        const imagen = require(`../assets/images/${prod.img}`)
 
-
-
-    );
-
+            return <article key={i}>
+                <div>
+                    <img src={imagen} alt="" />
+                </div>
+                <div>
+                    <h2>{prod.name}</h2>
+                </div>
+                <div>
+                    <p>$ {prod.price}</p>
+                </div>
+            </article>
+        })
+    )
 }
 
 export default Item;
