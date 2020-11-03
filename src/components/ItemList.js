@@ -1,13 +1,13 @@
 import React from 'react';
 import Item from './Item';
-import dataJson from '../data.json';
+import jsonData from '../data.json';
 
 function ItemList() {
 
     return(
-        <section>
+        <section className="product__container">
            
-                <Item dataJson={dataJson} />
+                <Item jsonData={jsonData} />
           
         </section>
 

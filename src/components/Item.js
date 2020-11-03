@@ -1,34 +1,38 @@
 import React, { useState, useEffect } from 'react';
+import AddItemCount from '../assets/images/itemCount__add.svg';
 
-const getPromise = (data) => {
-    return new Promise((res, rej) => {
+const netDelay = (data) => {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
-            return res(data)
+            return resolve(data)
         }, 2000)
     })
 }
 
-const Item = ({dataJson}) => {
+const Item = ({jsonData}) => {
 
-    const [sourceData, SetSourceData] = useState([]);
+    const [Items, SetItems] = useState([]);
 
     useEffect(() => {
-        const info = getPromise(dataJson);
-        info.then(result => SetSourceData(result));
-    }, [dataJson])
+        const ItemData = netDelay(jsonData);
+        ItemData.then(dataResult => SetItems(dataResult));
+    }, [jsonData])
 
     return (
-        sourceData.map((prod, i) => {
+        Items.map((prod, id) => {
         const imagen = require(`../assets/images/${prod.img}`)
 
-            return <article key={i}>
-                <div>
-                    <img src={imagen} alt="" />
+            return <article key={id} className="product__content">
+                <div className="product__view">
+                    <img src={imagen} alt={prod.alt} />
                 </div>
-                <div>
-                    <h2>{prod.name}</h2>
-                </div>
-                <div>
+                <h2 className="product__title">{prod.name}</h2>
+                <div className="product__price">
+                    <div className="roundBtn roundBtn--small">
+                        <span className="itemCount__add">
+                            <img src={AddItemCount} alt="Agregar" />
+                        </span>
+                    </div>
                     <p>$ {prod.price}</p>
                 </div>
             </article>

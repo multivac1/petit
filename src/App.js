@@ -5,6 +5,7 @@ import './assets/css/navbar.css';
 import './assets/css/home.css';
 import './assets/css/buttons.css';
 import './assets/css/itemCount.css';
+import './assets/css/item.css';
 /* Components */
 import Home from './components/Home';
 import NavBar from './components/NavBar';
