@@ -23,19 +23,21 @@ const Item = ({jsonData}) => {
         const imagen = require(`../assets/images/${prod.img}`)
 
             return <article key={id} className="product__content">
-                <div className="product__view">
-                    <img src={imagen} alt={prod.alt} />
-                </div>
-                <h2 className="product__title">{prod.name}</h2>
-                <div className="product__price">
-                    <div className="roundBtn roundBtn--small">
-                        <span className="itemCount__add">
-                            <img src={AddItemCount} alt="Agregar" />
-                        </span>
-                    </div>
-                    <p>$ {prod.price}</p>
-                </div>
-            </article>
+                        <div className="product__view">
+                            <img src={imagen} alt={prod.alt} />
+                        </div>
+                        <div className="product__box">
+                            <h2 className="product__title">{prod.name}</h2>
+                            <div className="product__price">
+                                <div className="roundBtn roundBtn--small">
+                                    <span className="itemCount__add">
+                                        <img src={AddItemCount} alt="Agregar" />
+                                    </span>
+                                </div>
+                                <h3>$ {prod.price}</h3>
+                            </div>
+                        </div>
+                    </article>
         })
     )
 }
