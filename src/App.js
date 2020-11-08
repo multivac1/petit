@@ -9,23 +9,30 @@ import './assets/css/item.css';
 /* Components */
 import Home from './components/Home';
 import NavBar from './components/NavBar';
-import ItemCount from './components/ItemCount';
+/* Router */
+import { BrowserRouter } from 'react-router-dom';
+
+
 
 
 function App() {
   return (
-  <Fragment>
+    <BrowserRouter>
     
-    <NavBar />      
+      <Fragment>
     
-    <Home 
+        <NavBar />      
+        
+        <Home 
 
-      greeting="Impresiones 3D
-      Grabado láser" 
-      
-    />
-    
-    </Fragment>
+          greeting="Impresiones 3D
+          Grabado láser" 
+          
+        />
+        
+      </Fragment>
+
+    </BrowserRouter>
   );
 }
 
