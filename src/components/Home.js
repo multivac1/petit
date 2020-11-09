@@ -1,6 +1,5 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemCount from './ItemCount';
 import ItemList from './ItemList';
 
 const Home = (props) => {
@@ -12,8 +11,6 @@ const Home = (props) => {
             </h1> 
 
             <ItemList />
-
-            <ItemCount />  
 
         </div>
     );

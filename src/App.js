@@ -7,12 +7,10 @@ import './assets/css/buttons.css';
 import './assets/css/itemCount.css';
 import './assets/css/item.css';
 /* Components */
-import Home from './components/Home';
+
 import NavBar from './components/NavBar';
 /* Router */
 import { BrowserRouter } from 'react-router-dom';
-
-
 
 
 function App() {
@@ -22,13 +20,6 @@ function App() {
       <Fragment>
     
         <NavBar />      
-        
-        <Home 
-
-          greeting="Impresiones 3D
-          Grabado láser" 
-          
-        />
         
       </Fragment>
 
