@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AddItemCount from '../assets/images/itemCount__add.svg';
-import { Route, Link, Switch } from 'react-router-dom';
-import ItemDetailContainer from './ItemDetailContainer';
+import { Link } from 'react-router-dom';
 
 const netDelay = (data) => {
     return new Promise((resolve, reject) => {
@@ -41,11 +40,6 @@ const Item = ({jsonData}) => {
                                 <h3>$ {prod.price}</h3>
                             </div>
                         </div>
-                        <Switch>
-               
-                            <Route path="/ItemDetailContainer/:id" component={ItemDetailContainer} />
-               
-                        </Switch>
                     </article>
         })
     )
