@@ -3,7 +3,9 @@ import React from 'react';
 const Cart = () => {
 
     return (
-        <h1>Este va a ser el Cart</h1>
+        <div className="page__container">
+            <h1>Cart</h1>
+        </div>
     )
 }
 

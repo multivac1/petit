@@ -24,7 +24,7 @@ function ItemList() {
     }, [])
 
     return(
-        <section className="product__container">
+        <section className="items__container">
             { loading && <Spinner/> }
             { !loading &&  <Item getItems={getItems}/> }
         </section>

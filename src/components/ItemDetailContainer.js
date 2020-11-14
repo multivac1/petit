@@ -29,9 +29,11 @@ const ItemDetailContainer = () => {
   }, [])
   
   return ( 
-      <section className="container__item__list">
-        { loading && <Spinner/> }
-        { !loading &&  <ItemDetail item={item}/> }
+      <section className="page__container">
+        <div className="detail__container">
+          { loading && <Spinner/> }
+          { !loading &&  <ItemDetail item={item}/> }
+        </div>
       </section>
   );
 }
