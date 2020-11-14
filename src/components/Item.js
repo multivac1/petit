@@ -1,46 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import AddItemCount from '../assets/images/itemCount__add.svg';
 import { Link } from 'react-router-dom';
 
-const netDelay = (data) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            return resolve(data)
-        }, 2000)
-    })
-}
-
-const Item = ({jsonData}) => {
-
-    const [Items, SetItems] = useState([]);
-
-    useEffect(() => {
-        const ItemData = netDelay(jsonData);
-        ItemData.then(dataResult => SetItems(dataResult));
-    }, [jsonData])
+const Item = ({getItems}) => {
 
     return (
-        Items.map((prod, id) => {
-        const imagen = require(`../assets/images/${prod.img}`)
+        getItems.map((prod, key) => {
+        const itemImage = require(`../assets/images/${prod.img}`)
 
-            return <article key={id} className="product__content">
-                        <div className="product__view">
-                            <img src={imagen} alt={prod.alt} />
+            return <article key={key} className="product__content">
+                <div className="product__view">
+                    <img src={itemImage} alt={prod.alt} />
+                </div>
+                <div className="product__box">
+                    <h2 className="product__title">{prod.name}</h2>
+                    <div className="product__price">
+                        <div className="roundBtn roundBtn--small">
+                            <span className="itemCount__add">
+                                <Link to={`/Item/${prod.id}`}>
+                                    <img src={AddItemCount} alt="Detalle" />
+                                </Link>
+                            </span>
                         </div>
-                        <div className="product__box">
-                            <h2 className="product__title">{prod.name}</h2>
-                            <div className="product__price">
-                                <div className="roundBtn roundBtn--small">
-                                    <span className="itemCount__add">
-                                        <Link to={`/ItemDetailContainer/${id}`}>
-                                            <img src={AddItemCount} alt="Detalle" />
-                                        </Link>
-                                    </span>
-                                </div>
-                                <h3>$ {prod.price}</h3>
-                            </div>
-                        </div>
-                    </article>
+                        <h3>$ {prod.price}</h3>
+                    </div>
+                </div>
+            </article>
         })
     )
 }

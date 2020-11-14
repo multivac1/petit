@@ -1,16 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Item from './Item';
 import jsonData from '../data.json';
+import Spinner from './Spinner';
+
+const getPromise = (data) => {
+    return new Promise((resolved, rejected) => {
+      setTimeout(() => {
+        return resolved(data)
+      }, 2000)
+    })
+}
 
 function ItemList() {
 
+    const [loading, setLoading] = useState(true);
+    const [getItems, setGetItems] = useState([]);
+
+    useEffect(() => {
+        getPromise( jsonData ).then(result => {
+            setGetItems(result);
+            setLoading(false)
+        });
+    }, [])
+
     return(
         <section className="product__container">
-           
-                <Item jsonData={jsonData} />
-          
+            { loading && <Spinner/> }
+            { !loading &&  <Item getItems={getItems}/> }
         </section>
-
     );
 }
 
