@@ -27,4 +27,17 @@
     background-color: royalblue;
 }
 
+.cart__counter {
+    position: absolute;
+    right: 40px;
+    top: 15px;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: var(--icons-color-active);
+    color: #EFF1FA;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 600;
+}
 

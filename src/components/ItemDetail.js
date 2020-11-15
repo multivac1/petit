@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
-import LogoPetit from '../assets/images/logo_petit.svg';
 import CloseButton from '../assets/images/close_icon.svg';
 
 const ItemDetail = ({item}) => {
+
+    const [ itemCount, setItemCount ] = useState(0);
+
+    const increase = () => {
+         if (itemCount === 10) {
+             setItemCount(10)
+             return;
+         }
+         setItemCount (itemCount + 1)
+     }
+ 
+     const decrease = () => {
+         if (itemCount === 0) {
+             setItemCount(0)
+             return;
+         }
+         setItemCount (itemCount - 1)
+     }
+
     return (
         
         item.map((prod, key) => {
@@ -30,7 +48,11 @@ const ItemDetail = ({item}) => {
                         </div>
                     </div>
                 </article>
-                <ItemCount />
+                <ItemCount 
+                    decrease={decrease}
+                    itemCount={itemCount}
+                    increase={increase}
+                />
             </>
         })
     );
