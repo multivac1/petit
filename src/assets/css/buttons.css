@@ -6,7 +6,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     border-radius: 50px;
     box-shadow:  7px 7px 11px #D8DAE5, 
                 -7px -7px 11px #fff;
+}
+
+.roundBtn--small {
+    width: 30px;
+    height: 30px;
 }

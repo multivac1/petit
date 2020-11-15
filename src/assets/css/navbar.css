@@ -23,5 +23,8 @@
     list-style: none;
 }
 
+.navbar__selected {
+    background-color: royalblue;
+}
 
 

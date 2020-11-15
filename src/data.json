@@ -3,32 +3,32 @@
         "id": 1,
         "img": "pulsera.png",
         "alt": "Pulsera de madera",
-        "name": "Pulsera",
+        "name": "Pulsera 1",
         "price": 120,
-        "description": "Aquí iría la descripción del producto también podría agregarse una muestr ade colores disponibles o lo que creas necesario"
+        "description": "Aquí iría la descripción del producto, también podría agregarse una muestra de colores disponibles"
     },
     {
         "id": 2,
         "img": "pulsera.png",
         "alt": "Pulsera de madera",
-        "name": "Pulsera",
+        "name": "Pulsera 2",
         "price": 130,
-        "description": "Aquí iría la descripción del producto también podría agregarse una muestr ade colores disponibles o lo que creas necesario"    
+        "description": "Aquí iría la descripción del producto, también podría agregarse una muestra de colores disponibles"    
     },
     {
         "id": 3,
         "img": "pulsera.png",
         "alt": "Pulsera de madera",
-        "name": "Pulsera",
+        "name": "Pulsera 3",
         "price": 140,
-        "description": "Aquí iría la descripción del producto también podría agregarse una muestr ade colores disponibles o lo que creas necesario"    
+        "description": "Aquí iría la descripción del producto, también podría agregarse una muestra de colores disponibles"    
     },
     {
         "id": 4,
         "img": "pulsera.png",
         "alt": "Pulsera de madera",
-        "name": "Pulsera",
+        "name": "Pulsera 4",
         "price": 150,
-        "description": "Aquí iría la descripción del producto también podría agregarse una muestr ade colores disponibles o lo que creas necesario"    
+        "description": "Aquí iría la descripción del producto, también podría agregarse una muestra de colores disponibles"    
     }
 ]

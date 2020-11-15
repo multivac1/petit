@@ -16,11 +16,9 @@ const Item = ({getItems}) => {
                     <h2 className="item__title">{prod.name}</h2>
                     <div className="item__price">
                         <div className="roundBtn roundBtn--small">
-                            <span className="itemCount__add">
-                                <Link to={`/Item/${prod.id}`}>
-                                    <img src={AddItemCount} alt="Detalle" />
-                                </Link>
-                            </span>
+                            <Link to={`/Item/${prod.id}`}>
+                                <img src={AddItemCount} alt="Detalle" />
+                            </Link>
                         </div>
                         <h3>$ {prod.price}</h3>
                     </div>

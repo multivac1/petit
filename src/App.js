@@ -5,6 +5,7 @@ import './assets/css/page.css';
 import './assets/css/buttons.css';
 import './assets/css/itemCount.css';
 import './assets/css/item.css';
+import './assets/css/detailContainer.css';
 import './assets/css/spinner.css';
 /* Components */
 import React from 'react';

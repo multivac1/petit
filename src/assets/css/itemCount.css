@@ -15,10 +15,6 @@
     list-style: none;
 }
 
-.itemCount__rest, .itemCount__add {
-    cursor: pointer;
-}
-
 .itemCount__quantity {
     height: 50px;
     width: 50px;
