@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
   const [item, setGetItems] = useState([]);
 
   const { id } = useParams();
-  const searchItem = jsonData.filter(prod => prod.id == id)
+  const searchItem = jsonData.filter(prod => prod.id === id)
 
   useEffect(() => {
       getPromise( searchItem ).then(result => {

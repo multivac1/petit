@@ -4,7 +4,6 @@ import homeIcon from '../assets/images/home_icon.svg';
 import categoryIcon from '../assets/images/category_icon.svg';
 import CartIcon from './CartIcon';
 
-
 const NavBar = () => {
     
     return (

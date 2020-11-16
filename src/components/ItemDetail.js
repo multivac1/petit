@@ -53,6 +53,9 @@ const ItemDetail = ({item}) => {
                     itemCount={itemCount}
                     increase={increase}
                 />
+                <div className="container__buyBtn">
+                    <button className="buyBtn">Agregat al Carrito</button>
+                </div>
             </>
         })
     );

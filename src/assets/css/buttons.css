@@ -16,3 +16,24 @@
     width: 30px;
     height: 30px;
 }
+
+.container__buyBtn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.buyBtn {
+    width: 240px;
+    height: 50px;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    background-image: linear-gradient(to right, #57C2CC, #2D6469);
+    box-shadow: 7px 7px 11px #D8DAE5;
+}
+
+.buyBtn:focus {
+    outline: none;
+    box-shadow: 7px 7px 11px #afb1b9;
+}

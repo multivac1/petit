@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "1",
         "img": "pulsera.png",
         "alt": "Pulsera de madera",
         "name": "Pulsera 1",
@@ -8,7 +8,7 @@
         "description": "Aquí iría la descripción del producto, también podría agregarse una muestra de colores disponibles"
     },
     {
-        "id": 2,
+        "id": "2",
         "img": "pulsera.png",
         "alt": "Pulsera de madera",
         "name": "Pulsera 2",
@@ -16,7 +16,7 @@
         "description": "Aquí iría la descripción del producto, también podría agregarse una muestra de colores disponibles"    
     },
     {
-        "id": 3,
+        "id": "3",
         "img": "pulsera.png",
         "alt": "Pulsera de madera",
         "name": "Pulsera 3",
@@ -24,7 +24,7 @@
         "description": "Aquí iría la descripción del producto, también podría agregarse una muestra de colores disponibles"    
     },
     {
-        "id": 4,
+        "id": "4",
         "img": "pulsera.png",
         "alt": "Pulsera de madera",
         "name": "Pulsera 4",
