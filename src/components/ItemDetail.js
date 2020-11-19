@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import {CartContext} from '../context/CartContext';
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 import CloseButton from '../assets/images/close_icon.svg';
 
 const ItemDetail = ({item}) => {
+    
+    const setCount = useContext(CartContext);
+    const {setCart} = setCount;
 
     const [ itemCount, setItemCount ] = useState(0);
 
@@ -47,14 +51,14 @@ const ItemDetail = ({item}) => {
                             <h3>$ {prod.price}</h3>
                         </div>
                     </div>
-                </article>
+                </article>      
                 <ItemCount 
                     decrease={decrease}
                     itemCount={itemCount}
                     increase={increase}
                 />
                 <div className="container__buyBtn">
-                    <button className="buyBtn">Agregat al Carrito</button>
+                    <button className="buyBtn" onClick={setCart}>Agregat al Carrito</button>
                 </div>
             </>
         })

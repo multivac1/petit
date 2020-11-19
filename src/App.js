@@ -9,6 +9,7 @@ import './assets/css/detailContainer.css';
 import './assets/css/spinner.css';
 /* Components */
 import React from 'react';
+import CartContextProvider from './context/CartContext';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Categorias from './components/Categorias';
@@ -21,7 +22,7 @@ import { BrowserRouter, Switch, Route} from 'react-router-dom';
 function App() {
 
   return (
-
+    <CartContextProvider>
     <BrowserRouter>
       <NavBar />
       <Switch>
@@ -31,7 +32,7 @@ function App() {
         <Route path="/Item/:id" component={ItemDetailContainer} />
       </Switch>
     </BrowserRouter>
-
+    </CartContextProvider>
   );
 }
 

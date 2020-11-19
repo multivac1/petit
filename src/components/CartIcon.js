@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import {CartContext} from '../context/CartContext';
 import cartIcon from '../assets/images/cart_icon.svg';
 
-const CartIcon = ({itemCount}) => {
-    console.log(itemCount);
- 
+const CartIcon = () => {
+    const spanCount = useContext(CartContext);
+    const {cart} = spanCount;
+
     return (
         <>
             <span className="cart__counter">
                 <p>              
-                   {itemCount}
+                   {cart.length}
                 </p>
             </span>
+       
             <img src={cartIcon} alt="Carrito" />
         </>
     );
