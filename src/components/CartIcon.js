@@ -3,6 +3,7 @@ import {CartContext} from '../context/CartContext';
 import cartIcon from '../assets/images/cart_icon.svg';
 
 const CartIcon = () => {
+    
     const spanCount = useContext(CartContext);
     const {cart} = spanCount;
 
@@ -13,7 +14,6 @@ const CartIcon = () => {
                    {cart.length}
                 </p>
             </span>
-       
             <img src={cartIcon} alt="Carrito" />
         </>
     );
