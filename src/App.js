@@ -9,7 +9,6 @@ import './assets/css/detailContainer.css';
 import './assets/css/spinner.css';
 /* Components */
 import React from 'react';
-import CartContextProvider from './context/CartContext';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Categorias from './components/Categorias';
@@ -17,6 +16,8 @@ import Cart from './components/Cart';
 import ItemDetailContainer from './components/ItemDetailContainer';
 /* Router */
 import { BrowserRouter, Switch, Route} from 'react-router-dom';
+/* Context */
+import CartContextProvider from './context/CartContext';
 
 
 function App() {

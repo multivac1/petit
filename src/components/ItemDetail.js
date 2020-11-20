@@ -6,26 +6,7 @@ import CloseButton from '../assets/images/close_icon.svg';
 
 const ItemDetail = ({item}) => {
     
-    const setCount = useContext(CartContext);
-    const {setCart} = setCount;
-
-    const [ itemCount, setItemCount ] = useState(0);
-
-    const increase = () => {
-         if (itemCount === 10) {
-             setItemCount(10)
-             return;
-         }
-         setItemCount (itemCount + 1)
-     }
- 
-     const decrease = () => {
-         if (itemCount === 0) {
-             setItemCount(0)
-             return;
-         }
-         setItemCount (itemCount - 1)
-     }
+    const { setCart } = useContext( CartContext );
 
     return (
         
@@ -52,13 +33,9 @@ const ItemDetail = ({item}) => {
                         </div>
                     </div>
                 </article>      
-                <ItemCount 
-                    decrease={decrease}
-                    itemCount={itemCount}
-                    increase={increase}
-                />
+                <ItemCount />
                 <div className="container__buyBtn">
-                    <button className="buyBtn" onClick={setCart}>Agregat al Carrito</button>
+                    <button className="buyBtn" onClick={ () => setCart() }>Agregat al Carrito</button>
                 </div>
             </>
         })

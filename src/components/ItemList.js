@@ -7,7 +7,7 @@ const getPromise = (data) => {
     return new Promise((resolved, rejected) => {
       setTimeout(() => {
         return resolved(data)
-      }, 2000)
+      }, 500)
     })
 }
 

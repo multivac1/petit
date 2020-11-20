@@ -2,14 +2,34 @@ import React, { createContext, useState } from 'react';
 
 export const CartContext = createContext();
 
-const CartContextProvider = ({children}) => {
-    
-    const [ cart, setCart ] = useState([]);
+const CartContextProvider = ({ children }) => {
 
+    const [ cart, setCart ] = useState([]);
+    const [ itemCount, setItemCount ] = useState(0);
+
+    const increase = () => {
+         if (itemCount === 10) {
+             setItemCount(10)
+             return;
+         }
+         setItemCount (itemCount + 1)
+     }
+ 
+     const decrease = () => {
+         if (itemCount === 0) {
+             setItemCount(0)
+             return;
+         }
+         setItemCount (itemCount - 1)
+     }
+    
     return (
         <CartContext.Provider value={{
             cart,
-            setCart
+            setCart,
+            increase,
+            decrease,
+            itemCount
             }}
         >
             {children}
