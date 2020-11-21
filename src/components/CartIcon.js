@@ -10,7 +10,7 @@ const CartIcon = () => {
         <>
             <span className="cart__counter">
                 <p>              
-                   { cart.length }
+                   { cart }
                 </p>
             </span>
             <img src={ cartIcon } alt="Carrito" />

@@ -5,8 +5,11 @@ import ItemCount from './ItemCount';
 import CloseButton from '../assets/images/close_icon.svg';
 
 const ItemDetail = ({item}) => {
-    
-    const { setCart } = useContext( CartContext );
+
+    const cartContext = useContext(CartContext); 
+ 
+    const { setCart } = cartContext;
+    const { itemCount } = cartContext;
 
     return (
         
@@ -35,7 +38,7 @@ const ItemDetail = ({item}) => {
                 </article>      
                 <ItemCount />
                 <div className="container__buyBtn">
-                    <button className="buyBtn" onClick={ () => setCart() }>Agregat al Carrito</button>
+                    <button className="buyBtn" onClick={ () => setCart(itemCount) }>Agregat al Carrito</button>
                 </div>
             </>
         })
