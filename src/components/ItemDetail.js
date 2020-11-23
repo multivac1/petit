@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import {CartContext} from '../context/CartContext';
+import React, { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 import CloseButton from '../assets/images/close_icon.svg';
@@ -7,13 +7,12 @@ import CloseButton from '../assets/images/close_icon.svg';
 const ItemDetail = ({item}) => {
 
     const cartContext = useContext(CartContext); 
- 
-    const { setCart } = cartContext;
-    const { itemCount } = cartContext;
+
+    const { cart, selectProduct, addMore } = cartContext;
 
     return (
         
-        item.map((prod, key) => {
+        item.map((prod) => {
         const itemImage = require(`../assets/images/${prod.img}`)
 
             return <>
@@ -22,7 +21,7 @@ const ItemDetail = ({item}) => {
                         <img src={CloseButton} alt="Cerrar" />
                     </Link>
                 </div>           
-                <article key={key} className="detail__article">
+                <article key={prod.id} className="detail__article">
                     <div className="detail__content">
                         <div className="detail__view">
                             <img src={itemImage} alt={prod.alt} />
@@ -38,7 +37,7 @@ const ItemDetail = ({item}) => {
                 </article>      
                 <ItemCount />
                 <div className="container__buyBtn">
-                    <button className="buyBtn" onClick={ () => setCart(itemCount) }>Agregat al Carrito</button>
+                    <button className="buyBtn" onClick={() => {cart.find(item => item.id === prod.id) ? addMore(prod) : selectProduct(prod.id)}}>Agregar al Carrito</button>
                 </div>
             </>
         })

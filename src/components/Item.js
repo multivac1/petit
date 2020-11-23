@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 const Item = ({getItems}) => {
 
     return (
-        getItems.map((prod, key) => {
+        getItems.map((prod) => {
         const itemImage = require(`../assets/images/${prod.img}`)
 
-            return <article key={key} className="item__content">
+            return <article key={prod.id} className="item__content">
                 <div className="item__view">
                     <img src={itemImage} alt={prod.alt} />
                 </div>
