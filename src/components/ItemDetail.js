@@ -1,14 +1,16 @@
-import React, { useContext } from 'react';
-import { CartContext } from '../context/CartContext';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import AddToCart from './AddToCart'
 import ItemCount from './ItemCount';
 import CloseButton from '../assets/images/close_icon.svg';
 
 const ItemDetail = ({item}) => {
 
-    const cartContext = useContext(CartContext); 
+    const [prodQuantity, setProdQuantity] = useState(0)
 
-    const { cart, selectProduct, addMore } = cartContext;
+    function setQuantity(itemCount) {
+        setProdQuantity(itemCount)
+    }
 
     return (
         
@@ -35,10 +37,8 @@ const ItemDetail = ({item}) => {
                         </div>
                     </div>
                 </article>      
-                <ItemCount />
-                <div className="container__buyBtn">
-                    <button className="buyBtn" onClick={() => {cart.find(item => item.id === prod.id) ? addMore(prod) : selectProduct(prod.id)}}>Agregar al Carrito</button>
-                </div>
+                <ItemCount quantity={setQuantity} />
+                <AddToCart prod={prod} quantity={prodQuantity} />
             </>
         })
     );

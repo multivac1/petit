@@ -1,11 +1,27 @@
-import React, { useContext } from 'react';
-import { CartContext } from '../context/CartContext';
+import React, { useState, useEffect } from 'react';
 import AddItemCount from '../assets/images/itemCount__add.svg';
 import RestItemCount from '../assets/images/itemCount__rest.svg';
 
 const ItemCount = () => {
 
-    const { decrease, increase, itemCount } = useContext( CartContext );
+    const [ itemCount, setItemCount ] = useState(1);
+    
+    const increase = () => {
+         if (itemCount === 10) {
+             setItemCount(10)
+             return;
+         }
+         setItemCount (itemCount + 1)
+     }
+ 
+     const decrease = () => {
+         if (itemCount === 1) {
+             setItemCount(1)
+             return;
+         }
+         setItemCount (itemCount - 1)
+     }
+
 
     return(
         <div className="itemCount__container">

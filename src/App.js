@@ -25,15 +25,15 @@ function App() {
 
   return (
     <CartContextProvider>
-    <BrowserRouter>
-      <NavBar />
-      <Switch>
-        <Route exact path="/" component={Home} />       
-        <Route path="/categorias" component={Categorias} />
-        <Route path="/cart" component={Cart} />
-        <Route path="/Item/:id" component={ItemDetailContainer} />
-      </Switch>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home} />       
+          <Route path="/categorias" component={Categorias} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/Item/:id" component={ItemDetailContainer} />
+        </Switch>
+        <NavBar />
+      </BrowserRouter>
     </CartContextProvider>
   );
 }
