@@ -1,6 +1,6 @@
 .navbar {
     position: absolute !important;
-    position: fixed;
+    position: sticky;
     width: 100%;
     height: 75px;
     padding: 10px 45px;

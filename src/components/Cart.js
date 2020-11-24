@@ -9,7 +9,7 @@ const Cart = () => {
     const { cart } = useContext(CartContext);
 
     return (
-        <section className="page__container">
+        <section className="cart__container">
             <div className="detail__header">
                 <Link to="/" className="roundBtn roundBtn--small">
                     <img src={CloseButton} alt="Cerrar" />
@@ -26,7 +26,7 @@ const Cart = () => {
             {cart.map((prod) => {
             const itemImage = require(`../assets/images/${prod.img}`)
                 return <>
-                    <div className="cart__container">   
+                    <div className="cart__item">   
                         <article key={prod.id} className="cart__article">
                             <div className="cart__content">
                                 <div className="cart__view">
