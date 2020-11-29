@@ -1,7 +1,7 @@
 import React from 'react';
 import ItemsCategories from './ItemsCategories';
 
-const Categorias = () => {
+const Categories = () => {
 
     return ( 
             <div>
@@ -10,4 +10,4 @@ const Categorias = () => {
     );
 }
 
-export default Categorias;
+export default Categories;

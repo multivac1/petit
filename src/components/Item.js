@@ -7,7 +7,6 @@ const Item = () => {
 
     const [DBContext] = useState(GetDBFirebase());
     const [productos, setProductos] = useState([]);
-    //const [categorias, setCategorias] = useState([]);
 
     useEffect(() => {
         GetAll("items").then((ret) => {

@@ -1,42 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { GetDBFirebase, GetAll } from '../tools/firebaseFactory';
 import { NavLink } from 'react-router-dom';
 
 const ItemsCategories = () => {
 
+    const [DBContext] = useState(GetDBFirebase());
+    const [categories, setCategories] = useState([]);
+
+    useEffect(() => {
+        GetAll("categories").then((ret) => {
+            setCategories(ret);
+        });
+        return () => {
+        };
+    }, []);
+
     return(
-        <ul className="category__container">
+        <div>
             <h1>Categorías</h1>
-            <li className="category__title">
-                <NavLink to={`categoria/accesorios`}>
-                    <h2>Accesorios</h2>
-                </NavLink>
-            </li>
-            <li className="category__title">
-                <NavLink to={`categoria/decoracion`}>
-                    <h2>Decoracion</h2>
-                </NavLink>
-            </li>
-            <li className="category__title">
-                <NavLink to={`categoria/laboratorio`}>
-                    <h2>Laboratorio</h2>
-                </NavLink>
-            </li>
-            <li className="category__title">
-                <NavLink to={`categoria/oficina`}>
-                    <h2>Oficina</h2>
-                </NavLink>
-            </li>
-            <li className="category__title">
-                <NavLink to={`categoria/publicidad`}>
-                    <h2>Publicidad</h2>
-                </NavLink>
-            </li>
-            <li className="category__title">
-                <NavLink to={`categoria/vidrio`}>
-                    <h2>Vidrio</h2>
-                </NavLink>
-            </li>
-        </ul>
+            {categories.map((cat) => {
+                return <>
+                    <ul className="category__container">
+                        <li className="category__title">
+                            <NavLink to={`categoria/${cat.name}`}>
+                                <h2>{cat.name}</h2>
+                            </NavLink>
+                        </li>
+                    </ul>
+                </>
+            })}
+        </div>
     );
 }
 

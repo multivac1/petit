@@ -12,7 +12,7 @@ import './assets/css/spinner.css';
 import React from 'react';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
-import Categorias from './components/Categorias';
+import Categories from './components/Categories';
 import Cart from './components/Cart';
 import ItemDetailContainer from './components/ItemDetailContainer';
 /* Router */
@@ -28,7 +28,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />       
-          <Route path="/categorias" component={Categorias} />
+          <Route path="/categorias" component={Categories} />
           <Route path="/cart" component={Cart} />
           <Route path="/Item/:id" component={ItemDetailContainer} />
         </Switch>

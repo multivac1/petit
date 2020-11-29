@@ -19,47 +19,22 @@ export const GetDBFirebase = () => firebase.firestore(DB);
 //////////////////////////////////////////////////////////
 
 export function GetAll(collection) {
-    const productosCollections = GetDBFirebase().collection(collection);
+    const firestoreCollection = GetDBFirebase().collection(collection);
 
-    return productosCollections
+    return firestoreCollection
         .get()
         .then((result) => {
             if (result.size === 0) {
-            console.log("Sin resultados");
+            console.log(`${collection}: Sin resultados`);
         }
-        let ret = [];
+        let res = [];
         result.docs.forEach((doc) => {
-           ret = [...ret, doc.data()];
+           res = [...res, doc.data()];
         });
 
-        return ret;
+        return res;
     })
     .catch((error) => console.log(error))
     .finally(() => {});
 }
 
-//////////////////////////////////////////////////////////
-
-/*
-export function getById(id) {
-    const producto = GetDBFirebase().collection("items").doc(id);
-
-    return producto
-      .get()
-      .then((doc) => {
-        if (!doc.exists) {
-          console.log("Producto inexistente");
-        }
-
-        let ret = [];
-        doc.docs.forEach((doc) => {
-           ret = [...ret, doc.data()];
-        });
-
-        return ret;
-
-      })
-      .catch((error) => console.log(error))
-      .finally(() => {});
-  }
-  */
