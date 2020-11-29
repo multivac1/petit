@@ -1,22 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { GetDBFirebase, GetAll } from '../tools/firebaseFactory';
 import AddItemCount from '../assets/images/itemCount__add.svg';
 import { Link } from 'react-router-dom';
 
-const Item = ({getItems}) => {
+const Item = () => {
+
+    const [DBContext] = useState(GetDBFirebase());
+    const [productos, setProductos] = useState([]);
+    //const [categorias, setCategorias] = useState([]);
+
+    useEffect(() => {
+        GetAll("items").then((ret) => {
+            setProductos(ret);
+        });
+        return () => {
+        };
+    }, []);
 
     return (
-        getItems.map((prod) => {
-        const itemImage = require(`../assets/images/${prod.img}`)
-
-            return <article key={prod.id} className="item__content">
+        productos.map((prod) => {
+            return <article key={prod.categoryId} className="item__content">
                 <div className="item__view">
-                    <img src={itemImage} alt={prod.alt} />
+                    <img src={prod.image} alt="" />
                 </div>
                 <div className="item__box">
-                    <h2 className="item__title">{prod.name}</h2>
+                    <h2 className="item__title">{prod.title}</h2>
                     <div className="item__price">
                         <div className="roundBtn roundBtn--small">
-                            <Link to={`/Item/${prod.id}`}>
+                            <Link to={`/Item/${prod.categoryId}`}>
                                 <img src={AddItemCount} alt="Detalle" />
                             </Link>
                         </div>
