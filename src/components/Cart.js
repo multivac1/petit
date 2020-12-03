@@ -3,6 +3,7 @@ import { CartContext } from '../context/CartContext';
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 import CloseButton from '../assets/images/close_icon.svg';
+import NewProd from './NewProd';
 
 const Cart = () => {
 
@@ -44,6 +45,7 @@ const Cart = () => {
                             <button className="buyBtn">Comprar</button>
                         </div>
                     </div>
+                    <NewProd />
                 </>
             })}
         </section>

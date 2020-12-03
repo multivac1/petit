@@ -18,7 +18,7 @@ const Item = () => {
 
     return (
         productos.map((prod) => {
-            return <article key={prod.categoryId} className="item__content">
+            return <article key={prod.id} className="item__content">
                 <div className="item__view">
                     <img src={prod.image} alt="" />
                 </div>
@@ -26,7 +26,7 @@ const Item = () => {
                     <h2 className="item__title">{prod.title}</h2>
                     <div className="item__price">
                         <div className="roundBtn roundBtn--small">
-                            <Link to={`/Item/${prod.categoryId}`}>
+                            <Link to={`/Item/${prod.id}`}>
                                 <img src={AddItemCount} alt="Detalle" />
                             </Link>
                         </div>

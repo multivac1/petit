@@ -40,3 +40,14 @@
     font-weight: 600;
 }
 
+.navbar__selected--home path {
+    fill: var(--icons-color-active);
+}
+
+.navbar__selected--categories #sec-path {
+    fill: var(--icons-color-active);
+}
+
+.navbar__selected--cart path {
+    stroke: var(--icons-color-active);
+}

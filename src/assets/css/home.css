@@ -1,0 +1,31 @@
+.home__content {
+    width: 100%;
+    margin-top: 1.2rem;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search__form {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+.search__input {
+    display: none;
+}
+
+.home__title {
+    text-align: center;
+    font-weight: 400;
+    font-family: var(--abril-font);
+    color: var(--text-color-light);
+}
+
+.home__title > strong {
+    font-weight: 500;
+    color: var(--text-color-dark);
+}

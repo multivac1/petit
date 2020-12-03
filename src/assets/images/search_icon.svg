@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20.262" height="20.262" viewBox="0 0 20.262 20.262">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Trazado_5" data-name="Trazado 5" d="M330.906-56.816,326.4-61.335a8.549,8.549,0,0,0-1.255-11.58,8.549,8.549,0,0,0-11.64.419,8.55,8.55,0,0,0-.419,11.64,8.55,8.55,0,0,0,11.58,1.255l4.519,4.507a1.221,1.221,0,0,0,1.722,0A1.221,1.221,0,0,0,330.906-56.816ZM319.56-60.333a6.107,6.107,0,0,1-6.107-6.107,6.107,6.107,0,0,1,6.107-6.107,6.107,6.107,0,0,1,6.107,6.107A6.107,6.107,0,0,1,319.56-60.333Z" transform="translate(0 0)" fill="#828eb4" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Trazado_4" data-name="Trazado 4" d="M309-52.686h24.314V-77H309Z" transform="translate(-309 77)" fill="#828eb4" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="Rectángulo_9" data-name="Rectángulo 9" width="24.314" height="24.314" fill="#828eb4" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <path id="Trazado_3" data-name="Trazado 3" d="M309-77h24.314v24.314H309Z" transform="translate(-309 77)" fill="#828eb4" stroke="#707070" stroke-width="1" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <path id="Trazado_2" data-name="Trazado 2" d="M310-53.712h22.288V-76H310Z" transform="translate(-310 76)" fill="#828eb4" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="search_icon" transform="translate(-311 75)" clip-path="url(#clip-path)">
+    <g id="Grupo_13" data-name="Grupo 13" transform="translate(308.974 -77.026)" clip-path="url(#clip-path-2)">
+      <g id="Grupo_12" data-name="Grupo 12" clip-path="url(#clip-path-3)">
+        <g id="Grupo_11" data-name="Grupo 11" clip-path="url(#clip-path-4)">
+          <g id="Grupo_10" data-name="Grupo 10" transform="translate(1.013 1.013)" clip-path="url(#clip-path-5)">
+            <g id="Trazado_1" data-name="Trazado 1" transform="translate(-310.078 75.922)" fill="#828eb4">
+              <path d="M 337.944580078125 -48.05544662475586 L 304.5 -48.05544662475586 L 304.5 -81.49999237060547 L 337.944580078125 -81.49999237060547 L 337.944580078125 -48.05544662475586 Z" stroke="none"/>
+              <path d="M 305 -81 L 305 -48.55544281005859 L 337.444580078125 -48.55544281005859 L 337.444580078125 -81 L 305 -81 M 304 -82 L 338.444580078125 -82 L 338.444580078125 -47.55544281005859 L 304 -47.55544281005859 L 304 -82 Z" stroke="none" fill="#707070"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,5 +1,6 @@
 /* Styles */
 import './assets/css/main.css';
+import './assets/css/home.css';
 import './assets/css/navbar.css';
 import './assets/css/page.css';
 import './assets/css/buttons.css';
@@ -27,7 +28,7 @@ function App() {
     <CartContextProvider>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Home} />       
+          <Route exact path="/home" component={Home} />       
           <Route path="/categorias" component={Categories} />
           <Route path="/cart" component={Cart} />
           <Route path="/Item/:id" component={ItemDetailContainer} />

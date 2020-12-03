@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import homeIcon from '../assets/images/home_icon.svg';
-import categoryIcon from '../assets/images/category_icon.svg';
+import HomeIcon from './HomeIcon';
+import CategoryIcon from './CategoryIcon';
 import CartIcon from './CartIcon';
 
 const NavBar = () => {
@@ -11,19 +11,13 @@ const NavBar = () => {
             <nav className="navbar">
                 <ul className="navbar__list">
                     <li className="navbar__links roundBtn">
-                        <NavLink to="/" activeClassName="navbar__selected--home">
-                            <img src={homeIcon} alt="Inicio" />
-                        </NavLink>
+                        <HomeIcon />
                     </li>
                     <li className="navbar__links roundBtn">
-                        <NavLink to="/categorias" activeClassName="navbar__selected--categories">
-                            <img src={categoryIcon} alt="Categorias" />
-                        </NavLink>
+                        <CategoryIcon />
                     </li>
                     <li className="navbar__links roundBtn">
-                        <NavLink to="/cart" activeClassName="navbar__selected--cart">
-                            <CartIcon />
-                        </NavLink>
+                        <CartIcon />
                     </li>   
                 </ul>
             </nav>
