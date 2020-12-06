@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import HomeIcon from './HomeIcon';
 import CategoryIcon from './CategoryIcon';
 import CartIcon from './CartIcon';

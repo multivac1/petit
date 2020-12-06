@@ -23,13 +23,36 @@ export function GetAll(collection) {
 
     return firestoreCollection
         .get()
-        .then((result) => {
-            if (result.size === 0) {
+        .then((querySnapshot) => {
+            if (querySnapshot.size === 0) {
             console.log(`${collection}: Sin resultados`);
         }
         let res = [];
+        querySnapshot.docs.forEach((doc) => {
+            res = [...res, { id: doc.id, ...doc.data() }];
+        });
+
+        return res;
+        
+    })
+    .catch((error) => console.log(error))
+    .finally(() => {});
+}
+
+//////////////////////////////////////////////////////////
+
+export function GetById(id) {
+    const firestoreCollection = GetDBFirebase().collection("items").doc(id);
+
+    return firestoreCollection
+        .get()
+        .then((result) => {
+            if (!result.exists) {
+            console.log(`${id}: Sin resultados`);
+        }
+        let res = [];
         result.docs.forEach((doc) => {
-           res = [...res, doc.data()];
+           res = [...res, { id: doc.id, ...doc.data() }];
         });
 
         return res;
@@ -37,4 +60,3 @@ export function GetAll(collection) {
     .catch((error) => console.log(error))
     .finally(() => {});
 }
-

@@ -10,6 +10,7 @@ const Item = () => {
 
     useEffect(() => {
         GetAll("items").then((ret) => {
+            console.log(ret);
             setProductos(ret);
         });
         return () => {
