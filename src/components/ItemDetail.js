@@ -5,7 +5,9 @@ import ItemCount from './ItemCount';
 import CloseButton from '../assets/images/close_icon.svg';
 
 const ItemDetail = (props) => {
-console.log(props.item);
+
+    //console.log(props.item);
+
     return (
             <>   
                 <div className="detail__header">
@@ -28,9 +30,10 @@ console.log(props.item);
                     </div>
                 </article>      
                 <ItemCount />
-                <AddToCart prod={props.item} />
+                <AddToCart item={props.item} />
             </>
     );
+    
 }
 
 export default ItemDetail;

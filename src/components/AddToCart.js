@@ -8,7 +8,7 @@ function AddToCart(props) {
     return (
         <div className="container__buyBtn">
             <button type="button" className="buyBtn"
-            onClick={() => addProduct(props.prod)}>Agregar al carrito</button>
+            onClick={() => addProduct(props.item)}>Agregar al carrito</button>
         </div>
     )
 }
