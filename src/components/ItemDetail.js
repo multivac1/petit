@@ -1,39 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import AddToCart from './AddToCart'
+import AddToCart from './AddToCart';
 import ItemCount from './ItemCount';
 import CloseButton from '../assets/images/close_icon.svg';
 
 const ItemDetail = (props) => {
-
     //console.log(props.item);
 
+    const [prodQuantity, setProdQuantity] = useState(0);
+
+    function setQuantity(itemCount) {
+        setProdQuantity(itemCount);
+    }
+
     return (
-            <>   
-                <div className="detail__header">
-                    <Link to="/" className="roundBtn roundBtn--small">
-                        <img src={CloseButton} alt="Cerrar" />
-                    </Link>
-                </div>           
-                <article className="detail__article">
-                    <div className="detail__content">
-                        <div className="item__view">
-                            <img src={props.item.image} alt="" />
-                        </div>
+        <>
+            <div className="detail__header">
+                <Link to="/" className="roundBtn roundBtn--small">
+                    <img src={CloseButton} alt="Cerrar" />
+                </Link>
+            </div>
+            <article className="detail__article">
+                <div className="detail__content">
+                    <div className="item__view">
+                        <img src={props.item.image} alt="" />
                     </div>
-                    <div className="detail__box">
-                        <h2 className="detail__title">{props.item.title}</h2>
-                        <p>{props.item.desc}</p>
-                        <div className="detail__price">
-                            <h3>$ {props.item.price}</h3>
-                        </div>
+                </div>
+                <div className="detail__box">
+                    <h2 className="detail__title">{props.item.title}</h2>
+                    <p>{props.item.desc}</p>
+                    <div className="detail__price">
+                        <h3>$ {props.item.price}</h3>
                     </div>
-                </article>      
-                <ItemCount />
-                <AddToCart item={props.item} />
-            </>
+                </div>
+            </article>
+            <ItemCount quantity={setQuantity} />
+            <AddToCart
+                item={props.item}
+                price={props.item.price}
+                quantity={prodQuantity}
+            />
+        </>
     );
-    
-}
+};
 
 export default ItemDetail;

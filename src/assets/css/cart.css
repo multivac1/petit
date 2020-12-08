@@ -79,6 +79,6 @@
 }
 
 .cart__total {
-    margin-bottom: 20px;
-    text-align: left;
+    margin: 20px 0;
+    text-align: center;
 }
