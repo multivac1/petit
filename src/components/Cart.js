@@ -36,7 +36,8 @@ const Cart = () => {
                                         {item.title}
                                     </h2>
                                     <p>
-                                        <trong>Cantidad:</trong> {item.quantity}
+                                        <strong>Cantidad:</strong>{' '}
+                                        {item.quantity}
                                     </p>
                                     <h3 className="cart__price">
                                         Total: ${item.quantity * item.price}

@@ -23,12 +23,12 @@ export function GetAll(collection) {
 
     return firestoreCollection
         .get()
-        .then((querySnapshot) => {
-            if (querySnapshot.size === 0) {
+        .then((result) => {
+            if (result.size === 0) {
             console.log(`${collection}: Sin resultados`);
         }
         let res = [];
-        querySnapshot.docs.forEach((doc) => {
+        result.docs.forEach((doc) => {
             res = [...res, { id: doc.id, ...doc.data() }];
         });
 
@@ -46,16 +46,13 @@ export function GetById(id) {
 
     return firestoreCollection
         .get()
-        .then((result) => {
-            if (!result.exists) {
+        .then((doc) => {
+            if (!doc.exists) {
             console.log(`${id}: Sin resultados`);
-        }
-        let res = [];
-        result.docs.forEach((doc) => {
-           res = [...res, { id: doc.id, ...doc.data() }];
-        });
+            }
+            let res = [{ id: doc.id, ...doc.data() }];
 
-        return res;
+            return res;
     })
     .catch((error) => console.log(error))
     .finally(() => {});

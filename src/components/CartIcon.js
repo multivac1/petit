@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 
 const CartIcon = () => {
-    const { cart } = useContext(CartContext);
+    const { itemsInCart } = useContext(CartContext);
 
     return (
         <>
             <span className="cart__counter">
-                <p>{cart.length}</p>
+                <p>{itemsInCart}</p>
             </span>
             <NavLink to="/cart" activeClassName="navbar__selected--cart">
                 <svg
