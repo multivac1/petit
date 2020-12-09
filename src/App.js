@@ -19,7 +19,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 /* Router */
 import { BrowserRouter, Switch, Route} from 'react-router-dom';
 /* Context */
-import CartContextProvider from './context/CartContext';
+import CartContextProvider from './contexts/CartContext';
 
 
 function App() {

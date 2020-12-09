@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { CartContext } from '../context/CartContext';
+import { CartContext } from '../contexts/CartContext';
 import { Link } from 'react-router-dom';
 import CloseButton from '../assets/images/close_icon.svg';
 import BuyBtn from './BuyBtn';
