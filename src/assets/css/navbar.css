@@ -32,11 +32,14 @@
     top: 15px;
     width: 15px;
     height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 100%;
     background-color: var(--icons-color-active);
     color: #EFF1FA;
     font-size: 0.8rem;
-    text-align: center;
+    
     font-weight: 600;
 }
 
