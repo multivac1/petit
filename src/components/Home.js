@@ -1,5 +1,6 @@
 import React from 'react';
 import ItemList from './ItemList';
+import CategoryName from './CategoryName';
 import logoPetit from '../assets/images/logo_petit.svg';
 import searchIcon from '../assets/images/search_icon.svg';
 
@@ -21,6 +22,7 @@ const Home = () => {
                 <br/>
                 Grabado <strong>láser</strong>
             </h1>
+            <CategoryName />
             <ItemList />
         </div>
     );

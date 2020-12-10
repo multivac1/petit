@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { GetDBFirebase, GetAll } from '../tools/firebaseFactory';
 import { NavLink } from 'react-router-dom';
 
-const ItemsCategories = () => {
+const CategoryName = () => {
 
     const [DBContext] = useState(GetDBFirebase());
     const [categories, setCategories] = useState([]);
@@ -18,12 +18,12 @@ const ItemsCategories = () => {
     return(
         <div>
             <h1>Categorías</h1>
-            {categories.map((cat) => {
+            {categories.map((category) => {
                 return <>
                     <ul className="category__container">
                         <li className="category__title">
-                            <NavLink to={`categoria/${cat.name}`}>
-                                <h2>{cat.name}</h2>
+                            <NavLink to={`categoria/${category.name}`}>
+                                <h2>{category.name}</h2>
                             </NavLink>
                         </li>
                     </ul>
@@ -33,4 +33,4 @@ const ItemsCategories = () => {
     );
 }
 
-export default ItemsCategories;
+export default CategoryName;
