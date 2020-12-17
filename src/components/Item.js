@@ -1,24 +1,47 @@
 import React, { useEffect, useState } from 'react';
-import { GetDBFirebase, GetAll } from '../tools/firebaseFactory';
+import { GetDBFirebase } from '../tools/firebaseFactory';
 import AddItemCount from '../assets/images/itemCount__add.svg';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const Item = () => {
 
     const [DBContext] = useState(GetDBFirebase());
-    const [productos, setProductos] = useState([]);
+    const [prods, setProds] = useState([]);
+    const { key = "undefined" } = useParams();
 
-    useEffect(() => {
-        GetAll("items").then((ret) => {
-            console.log(ret);
-            setProductos(ret);
-        });
-        return () => {
-        };
-    }, []);
+   useEffect(() => {
+
+    const itemCollection = DBContext.collection("items")
+
+    if (key === "undefined") {
+        itemCollection.get().then((querySnapshot) => {
+            if (querySnapshot.size === 0) {
+                console.log("no resultados pa")
+            }
+            setProds(querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })))
+        }).catch((error) => {
+            console.log("Error buscando prods", error)
+        }).finally(() => {
+            console.log("listo")
+        })
+    } else {
+        const itemCategory = itemCollection.where("category", "==", key)
+        itemCategory.get().then((querySnapshot) => {
+            if (querySnapshot.size === 0) {
+                console.log("no resultados pa")
+            }
+            setProds(querySnapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })))
+        }).catch((error) => {
+            console.log("Error buscando prods", error)
+        }).finally(() => {
+            console.log("listo")
+        })
+    }
+
+}, [key])
 
     return (
-        productos.map((prod) => {
+        prods.map((prod) => {
             return <article key={prod.id} className="item__content">
                 <div className="item__view">
                     <img src={prod.image} alt="" />

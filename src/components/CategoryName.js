@@ -1,36 +1,52 @@
 import React, { useEffect, useState } from 'react';
-import { GetDBFirebase, GetAll } from '../tools/firebaseFactory';
+import { GetAll } from '../tools/firebaseFactory';
 import { NavLink } from 'react-router-dom';
+import ArrowIcon from '../assets/images/arrow_icon.svg';
 
 const CategoryName = () => {
-
-    const [DBContext] = useState(GetDBFirebase());
+    
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        GetAll("categories").then((ret) => {
+        GetAll('categories').then((ret) => {
             setCategories(ret);
         });
-        return () => {
-        };
+        return () => {};
     }, []);
 
-    return(
-        <div>
-            <h1>Categorías</h1>
-            {categories.map((category) => {
-                return <>
-                    <ul className="category__container">
-                        <li className="category__title">
-                            <NavLink to={`categoria/${category.name}`}>
-                                <h2>{category.name}</h2>
+    return (
+        <div className="category__hover">
+            <h3>
+                Categorías
+                <img
+                    src={ArrowIcon}
+                    alt="Menú desplegable"
+                    className="category__arrow"
+                />
+            </h3>
+            {categories.map((cat) => (
+                <div className="category__container">
+                    <ul className="category__menu">
+                        <li key={cat.key} className="category__title">
+                            <NavLink
+                                to={`/categories/${cat.key}`}
+                                activeClassName="category__links"
+                            >
+                                <p>
+                                    <img
+                                        src={ArrowIcon}
+                                        alt="Menú desplegable"
+                                        className="category__arrow--subcategory"
+                                    />
+                                    {cat.description}
+                                </p>
                             </NavLink>
                         </li>
                     </ul>
-                </>
-            })}
+                </div>
+            ))}
         </div>
     );
-}
+};
 
 export default CategoryName;

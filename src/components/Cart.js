@@ -2,11 +2,12 @@ import React, { useContext } from 'react';
 import { CartContext } from '../contexts/CartContext';
 import { Link } from 'react-router-dom';
 import CloseButton from '../assets/images/close_icon.svg';
+import DeleteIcon from '../assets/images/delete_icon.svg';
 import BuyBtn from './BuyBtn';
-import NewProd from './NewProd';
+import CancelBtn from './CancelBtn';
 
 const Cart = () => {
-    const { cart, totalPrice } = useContext(CartContext);
+    const { cart, totalPrice, deleteItem } = useContext(CartContext);
 
     return (
         <section className="cart__container">
@@ -28,6 +29,7 @@ const Cart = () => {
                     <div className="cart__item">
                         <article key={item.id} className="cart__article">
                             <div className="cart__content">
+                                <img src={DeleteIcon} alt="Eliminar" className="deleteBtn" onClick={() => deleteItem(item)} />
                                 <div className="cart__view">
                                     <img src={item.image} alt="" />
                                 </div>
@@ -48,9 +50,11 @@ const Cart = () => {
                     </div>
                 );
             })}
-
-            <h3 className="cart__total">Total: ${totalPrice()}</h3>
-            <BuyBtn />
+            {cart.length === 0 ? null : <> 
+                <h3 className="cart__total">Total: ${totalPrice()}</h3> 
+                <Link to='/checkout'> <BuyBtn /> </Link> 
+                <CancelBtn />
+            </>}
         </section>
     );
 };

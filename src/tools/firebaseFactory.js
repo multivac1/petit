@@ -25,35 +25,17 @@ export function GetAll(collection) {
         .get()
         .then((result) => {
             if (result.size === 0) {
-            console.log(`${collection}: Sin resultados`);
-        }
-        let res = [];
-        result.docs.forEach((doc) => {
-            res = [...res, { id: doc.id, ...doc.data() }];
-        });
+                console.log(`${collection}: Sin resultados`);
+            }
+            let res = [];
+            result.docs.forEach((doc) => {
+                res = [...res, { id: doc.id, ...doc.data() }];
+            });
 
-        return res;
-        
-    })
-    .catch((error) => console.log(error))
-    .finally(() => {});
+            return res;
+        })
+        .catch((error) => console.log(error))
+        .finally(() => {});
 }
 
 //////////////////////////////////////////////////////////
-
-export function GetById(id) {
-    const firestoreCollection = GetDBFirebase().collection("items").doc(id);
-
-    return firestoreCollection
-        .get()
-        .then((doc) => {
-            if (!doc.exists) {
-            console.log(`${id}: Sin resultados`);
-            }
-            let res = [{ id: doc.id, ...doc.data() }];
-
-            return res;
-    })
-    .catch((error) => console.log(error))
-    .finally(() => {});
-}

@@ -5,12 +5,11 @@ import ItemCount from './ItemCount';
 import CloseButton from '../assets/images/close_icon.svg';
 
 const ItemDetail = (props) => {
-    //console.log(props.item);
 
-    const [prodQuantity, setProdQuantity] = useState(0);
+    const [itemQuantity, setItemQuantity] = useState(0);
 
     function setQuantity(itemCount) {
-        setProdQuantity(itemCount);
+        setItemQuantity(itemCount);
     }
 
     return (
@@ -38,7 +37,7 @@ const ItemDetail = (props) => {
             <AddToCart
                 item={props.item}
                 price={props.item.price}
-                quantity={prodQuantity}
+                quantity={itemQuantity}
             />
         </>
     );

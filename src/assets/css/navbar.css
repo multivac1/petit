@@ -43,7 +43,7 @@
     font-weight: 600;
 }
 
-.navbar__selected--home path {
+.navbar__selected--home path:hover {
     fill: var(--icons-color-active);
 }
 
