@@ -1,18 +1,12 @@
-import React, { useContext } from 'react';
-import { CartContext } from '../contexts/CartContext';
-import Spinner from './Spinner';
+import React from 'react';
 import Item from './Item';
 
 const ItemList = () => {
-
-    const { loading } = useContext(CartContext);
-
-    return(
+    return (
         <section className="items__container">
-            { loading && <Spinner /> }
-            { !loading && <Item /> }
+            <Item />
         </section>
     );
-}
+};
 
 export default ItemList;

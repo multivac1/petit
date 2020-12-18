@@ -28,12 +28,13 @@ const ItemDetail = (props) => {
                 <div className="detail__box">
                     <h2 className="detail__title">{props.item.title}</h2>
                     <p>{props.item.desc}</p>
+                    <p>Unidades disponibles: {props.item.stock}</p>
                     <div className="detail__price">
                         <h3>$ {props.item.price}</h3>
                     </div>
                 </div>
             </article>
-            <ItemCount quantity={setQuantity} />
+            <ItemCount quantity={setQuantity} max={props.item.stock} />
             <AddToCart
                 item={props.item}
                 price={props.item.price}

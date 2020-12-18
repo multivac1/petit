@@ -8,11 +8,9 @@ const ItemCount = (props) => {
     const setQuantity = props.quantity;
 
     const increase = () => {
-        if (itemCount === 10) {
-            setItemCount(10);
-            return;
+        if (itemCount < props.max) {
+            setItemCount(itemCount + 1);
         }
-        setItemCount(itemCount + 1);
     };
 
     const decrease = () => {
