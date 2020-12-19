@@ -1,3 +1,10 @@
+## Petit: Reactjs App 
+
+Hi everybody. I share with you my Reactjs app. Please, feel free to use it or give me some feedback.
+This app was created only for mobile devices, so I recommend you try it inspecting the code on your browser and  toggle the device toolbar to "iPhone 6/7/8" for a correct experience.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
