@@ -1,27 +1,22 @@
-import React from 'react';
+import React, { Fragment }  from 'react';
 import HomeIcon from './HomeIcon';
-import CategoryIcon from './CategoryIcon';
 import CartIcon from './CartIcon';
 
 const NavBar = () => {
-    
     return (
-        <div>
+        <Fragment>
             <nav className="navbar">
                 <ul className="navbar__list">
                     <li className="navbar__links roundBtn">
                         <HomeIcon />
                     </li>
                     <li className="navbar__links roundBtn">
-                        <CategoryIcon />
-                    </li>
-                    <li className="navbar__links roundBtn">
                         <CartIcon />
-                    </li>   
+                    </li>
                 </ul>
             </nav>
-        </div>
+        </Fragment>
     );
-}
+};
 
 export default NavBar;

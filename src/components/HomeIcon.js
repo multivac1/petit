@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const HomeIcon = () => {
-    
     return (
         <NavLink to="/" activeClassName="navbar__selected--home">
             <svg

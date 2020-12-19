@@ -3,7 +3,6 @@ import AddItemCount from '../assets/images/itemCount__add.svg';
 import RestItemCount from '../assets/images/itemCount__rest.svg';
 
 const ItemCount = (props) => {
-    
     const [itemCount, setItemCount] = useState(1);
     const setQuantity = props.quantity;
 

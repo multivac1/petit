@@ -4,7 +4,6 @@ import { GetDBFirebase } from '../tools/firebaseFactory';
 import ItemDetail from './ItemDetail';
 
 const ItemDetailContainer = () => {
-  
     const [item, setItem] = useState([]);
     const { id } = useParams();
 

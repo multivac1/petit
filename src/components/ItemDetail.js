@@ -5,7 +5,6 @@ import ItemCount from './ItemCount';
 import CloseButton from '../assets/images/close_icon.svg';
 
 const ItemDetail = (props) => {
-
     const [itemQuantity, setItemQuantity] = useState(0);
 
     function setQuantity(itemCount) {

@@ -2,7 +2,7 @@ import React from 'react';
 import ItemList from './ItemList';
 import CategoryName from './CategoryName';
 import logoPetit from '../assets/images/logo_petit.svg';
-import searchIcon from '../assets/images/search_icon.svg';
+import SearchItems from './SearchItems';
 
 const Home = () => {
     
@@ -10,18 +10,7 @@ const Home = () => {
         <div className="page__container">
             <div className="home__content">
                 <img src={logoPetit} alt="Logotipo Petit" />
-                <form className="search__form">
-                    <input
-                        class="search__input"
-                        type="text"
-                        name="search"
-                        placeholder="Buscar"
-                        value=""
-                    ></input>
-                    <span className="roundBtn">
-                        <img src={searchIcon} alt="Buscar" />
-                    </span>
-                </form>
+                <SearchItems />
             </div>
             <h1 className="home__title">
                 Impresiones <strong>3D</strong>
