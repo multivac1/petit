@@ -4,6 +4,11 @@ Hi everybody. I share with you my Reactjs app. Please, feel free to use it or gi
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Demostration
+
+Take a look to the demostration below, to have an idea about how it works
+![](demo.gif)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -70,8 +75,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-### Demostration
-
-Take a look to the demostration below, to have an idea about how it works
-![](demo.gif)
